@@ -1,41 +1,93 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  margin: auto;
+  justify-content: center;
   text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+html, body {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
+main {
+  border-radius: 7px;
+  padding: 5vw 3vw ;
+  -webkit-box-shadow: 0px 0px 7px 7px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 7px 7px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 7px 7px rgba(0,0,0,0.75);
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.title-simulate-anticipation {
+  font-size: 24px;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.block-installments {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+.p-max_installments{
+  margin: 0;
+  margin-top: -5%;
+  width: fit-content;  
+  font-size: 8px;
+  font-style: italic;
+  letter-spacing: 0.7px; 
+  position: relative;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (min-width: 600px){  
+  main {
+    width: 75vw;
+    max-width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
   }
-  to {
-    transform: rotate(360deg);
+  .block-return_receive {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: brown;
+    font-size: 1.7em;
+    font-style: italic;
+  }
+  .p-receive-today{
+    width: 30vw;
+  }
+  .p-receive{
+    width: 100px;
+  }
+  .line {
+    width: 100%;
+    border: 0.7px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, transparent, brown);
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+
+
+
+@media only screen and (max-width: 600px){  
+  main {
+    flex-direction: column;
+    width: 270px;
   }
+  .block-return_receive {
+    display: flex;
+    flex-wrap: wrap;
+    color: brown;
+    font-size: 1.3em;
+  }
+  .p-receive-today{
+    width: 100%;
+  }
+  .p-receive{
+    width: 100px;
+  }
+  .line {
+  width: 100%;
+  border: 0.7px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to bottom, transparent, transparent, brown);
 }
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
