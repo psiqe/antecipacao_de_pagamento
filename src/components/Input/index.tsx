@@ -1,25 +1,27 @@
 import React from "react";
+import { Field, FieldValue, FieldValues, UseFormRegisterReturn, UseFormRegister, RegisterOptions } from "react-hook-form";
 import styles from './Style.module.css'
 
-type InputProps = {
+interface InputProps{
     type: string,
     text: string,
     name: string, 
-    placeholder: string, 
-    // handleOnChange: Event, 
-    value: string,
+    placeholder: string,
+    register?:  UseFormRegisterReturn
+    // register: UseFormRegister<FieldValues | any>
+    // options: RegisterOptions
 }
 
 
-export const Input = ({type, text, name, placeholder, value}: InputProps) => {
+export const Input = ({type, text, name, placeholder, register}: InputProps) => {
     return(
         <div className={styles.input_control}>
             <label htmlFor={name}>{text}:</label>
             <input 
                 type={type} 
-                name={name} 
-                placeholder={placeholder} 
-                value={value}/>
+                placeholder={placeholder}
+                {...register} 
+            />
         </div>
     )
 }

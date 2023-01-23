@@ -5,7 +5,11 @@
 }
 
 .input_control label {
-    margin-bottom: 0.6em;
+    /* margin-bottom: 0.6em; */
+    width: 30vw;
+    text-align: start;
+    max-width: 300px;
+    min-width: 215px;
     font-weight: bold;
     font-size: 14px;
 }

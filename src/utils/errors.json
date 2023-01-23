@@ -1,0 +1,12 @@
+{
+    "amount": {
+        "typeError": "We need to know the value"
+    },
+	"installments": {
+        "typeError": "How many installments",
+        "max": "The maximum value of installments is 12"
+    },
+	"mdr": {
+        "typeError": "What is the rate?"
+    }
+}

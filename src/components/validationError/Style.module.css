@@ -1,0 +1,4 @@
+.errors_field{
+    color: var(--error);
+    font-size: small;
+}

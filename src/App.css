@@ -16,9 +16,12 @@ main {
   -webkit-box-shadow: 0px 0px 7px 7px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 7px 7px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 7px 7px rgba(0,0,0,0.75);
+  /* overflow-y: auto; */
 }
 .title-simulate-anticipation {
-  font-size: 24px;
+  font-size: 3em;
+  margin: 3vw;
+  text-decoration: underline ;
 }
 .block-installments {
   display: flex;
@@ -27,6 +30,7 @@ main {
 }
 .p-max_installments{
   margin: 0;
+  margin-left: 1vw;
   margin-top: -5%;
   width: fit-content;  
   font-size: 8px;
@@ -34,60 +38,56 @@ main {
   letter-spacing: 0.7px; 
   position: relative;
 }
-
-@media only screen and (min-width: 600px){  
+.block-return_receive {
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--orange-500);
+}
+.line {
+  width: 100%;
+  border: 0.7px solid;
+  border-image-slice: 1;
+}
+.p-receive{
+  width: 100px;
+}
+@media only screen and (min-width: 834px){  
   main {
     width: 75vw;
     max-width: 90vw;
     display: flex;
     flex-wrap: wrap;
   }
+  .title-simulate-anticipation {
+    font-size: 3.5em;
+    margin: 1vw;
+    margin-bottom: 1em;
+  }
   .block-return_receive {
-    display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    color: brown;
     font-size: 1.7em;
     font-style: italic;
   }
   .p-receive-today{
     width: 30vw;
   }
-  .p-receive{
-    width: 100px;
-  }
   .line {
-    width: 100%;
-    border: 0.7px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(to right, transparent, brown);
+    border-image-source: linear-gradient(to right, transparent, var(--orange-500));
   }
 }
 
-
-
-
-@media only screen and (max-width: 600px){  
+@media only screen and (max-width: 834px){  
   main {
     flex-direction: column;
     width: 270px;
   }
   .block-return_receive {
-    display: flex;
-    flex-wrap: wrap;
-    color: brown;
     font-size: 1.3em;
   }
   .p-receive-today{
     width: 100%;
   }
-  .p-receive{
-    width: 100px;
-  }
   .line {
-  width: 100%;
-  border: 0.7px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to bottom, transparent, transparent, brown);
-}
+  border-image-source: linear-gradient(to bottom, transparent, transparent, var(--orange-500));
+  }
 }

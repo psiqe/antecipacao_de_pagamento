@@ -1,0 +1,13 @@
+.button_control button {
+    border: none;
+    padding: 7px;
+    border-radius: 7px;
+    background-color: black;
+    color: var(--orange-500);
+    opacity: 0.7;
+}
+.button_control button:hover {
+    background-color: var(--orange-500);
+    color: black;
+    opacity: 1;
+}
