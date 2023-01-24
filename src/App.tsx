@@ -7,22 +7,24 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { formSchema } from './validators/yupValidators';
 import { ValidationError } from './components/validationError';
-
+import {APIanticipate} from "./API/index"
 
 
 
 interface FormAnticipate {
 	amount: number;
+	mdr: number
 	installments: number;
-	mdr: number;
 }
 
 function App() {
 	const { register, handleSubmit, formState: {errors}} = useForm({
 		resolver: yupResolver(formSchema)
 	});
-	const onSubmit = (data:object) => {
-		console.log(data)
+	const onSubmit = (data: any): void => {
+		const calculateData = data
+		calculateData.days = [0, 1, 30, 60, 90]
+		APIanticipate(calculateData)
 	}
 	const onError = (error: any) => {
 
@@ -39,6 +41,7 @@ function App() {
 						name="amount"
 						register={register("amount")}
 						placeholder='Insert the sale amount'
+						step="0.01"
 					/>
 				</div>
 				{errors?.amount?.type && <ValidationError type={errors.amount.type} field="amount"/>}
@@ -61,6 +64,7 @@ function App() {
 						name='mdr'
 						register={register("mdr")}
 						placeholder='What is the rate?'
+						step="0.01"
 					/>
 				</div>
 				{errors?.mdr?.type && <ValidationError type={errors.mdr.type} field="mdr"/>}
