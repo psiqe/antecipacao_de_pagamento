@@ -1,32 +1,21 @@
-import axios from "axios"
-
-const url = "https://frontend-challenge-7bu3nxh76a-uc.a.run.app"
+import axios, { AxiosResponse } from "axios"
 
 type APIProps = {
     url: string
-    data: object
-
+    dataRequest: object
+    data: void
+    
 }
 
-export function APIanticipate(data: APIProps) {
-    const APIdata = JSON.stringify(data) 
-    console.log(typeof(APIdata))
-    console.log(APIdata)
-    // fetch("https://frontend-challenge-7bu3nxh76a-uc.a.run.app",{
-        
-    // })
-    //     .then(function(response){
-    //         if (!response.ok) throw new Error("Error" + response.status)
-    //     })
-    //     .then(function(data){
-    //         console.log(data)
-    //     }).catch(function(err){
-    //         console.log(err)
-    //     })
-    axios.post("https://frontend-challenge-7bu3nxh76a-uc.a.run.app", data)
+export async function APIanticipate(dataRequest: APIProps){
+    const url = "https://frontend-challenge-7bu3nxh76a-uc.a.run.app"
+    
+    const data = await axios.post(url, dataRequest)
         .then(response => {
-            return console.log(response)
+            return response
         }).catch((err)=>{
             console.log(err)
         })
+
+        return data
 }

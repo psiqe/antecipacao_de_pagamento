@@ -2,7 +2,6 @@ import React from 'react'
 import styles from './Style.module.css'
 
 type ButtonProps = {
-    // onClick: React.MouseEventHandler
     type: 'submit' | 'reset' | 'button';
 }
 

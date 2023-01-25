@@ -49,7 +49,9 @@ main {
   border-image-slice: 1;
 }
 .p-receive{
-  width: 100px;
+  width: fit-content;
+  margin: 7px;
+  
 }
 @media only screen and (min-width: 834px){  
   main {
@@ -67,6 +69,7 @@ main {
     flex-direction: column;
     font-size: 1.7em;
     font-style: italic;
+    align-items: center;
   }
   .p-receive-today{
     width: 30vw;

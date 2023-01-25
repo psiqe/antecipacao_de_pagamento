@@ -1,6 +1,7 @@
 {
     "amount": {
-        "typeError": "We need to know the value"
+        "typeError": "We need to know the value",
+        "min": "The minimum amount is 1000"
     },
 	"installments": {
         "typeError": "How many installments",

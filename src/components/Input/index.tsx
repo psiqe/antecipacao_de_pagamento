@@ -1,5 +1,9 @@
 import React from "react";
-import { Field, FieldValue, FieldValues, UseFormRegisterReturn, UseFormRegister, RegisterOptions } from "react-hook-form";
+import {
+    UseFormRegisterReturn, 
+    // UseFormRegister, 
+    // RegisterOptions 
+} from "react-hook-form";
 import styles from './Style.module.css'
 
 interface InputProps{
