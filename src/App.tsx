@@ -23,7 +23,8 @@ function App() {
 		const calculateData = data
 		calculateData.days = [0, 1, 30, 60, 90]
 		const receive = await APIanticipate(calculateData)
-		setReceiveAmount(receive.data)
+		if(receive)
+			setReceiveAmount(receive.data)
 	}
 	
 	return (
