@@ -22,17 +22,17 @@ You have a receivable amount, but you have a specific date for it; and you don't
 - [Yup](https://yarnpkg.com/package/yup)
 
 ```bash
-    # Clone o projeto
+    # Clone the project
     $ git clone git@github.com:psiqe/antecipacao_de_pagamento.git
 ```
 ```bash
-    # Instalar dependenciasm
+    # Install dependencies with NPM
     $ npm install
 ```
 ```bash
-    # Instalar dependencias
+    # Install dependencies with Yarn
     $ yarn
 ```
 
 ## 📋 Licence
-    Esse projeto usa a licença Mit. Veja o arquivo LICENCE para mais detalhes
+    This project uses the MIT license. See the LICENSE file for more details.
