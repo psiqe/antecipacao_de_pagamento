@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import './App.css'
 import { Button } from './components/Button'
 import { Input } from './components/Input'
-// import * as yup from 'yup';
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { formSchema } from './validators/yupValidators';
